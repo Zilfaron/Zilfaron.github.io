@@ -1,0 +1,477 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	max-width: 100%;
+	min-width: 320px;
+	line-height: 1.125;
+	z-index: 1;
+}
+a {
+	text-decoration: none;
+	cursor: not-allowed;
+}
+.header-wrapper {
+  height: 990px;
+  max-width: 100%;
+  background: url(../IMG/background.png) no-repeat center;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  background-size: cover;
+  align-items: center;
+  position: relative;
+}
+.info-wrapper {
+	background: url(../IMG/infobackground.png) no-repeat;
+	position: relative;
+	margin-top: 100px;
+}
+header {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	align-items: center;
+	height: 10vh;
+	justify-content: space-between;
+	width: 70%;
+	margin: 15px auto;
+}
+main {
+	padding-top: 1.5em;
+}
+.menu-link {
+	font-size: 1.2rem;
+	color: #B0C4DE;
+	transition: color .4s;
+}
+.menu-link:hover {
+	color: #fff;
+}
+.menu li {
+	margin-left: 30px;
+}
+.menu ul {
+	list-style: none;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	justify-content: space-between;
+}
+.menu {
+	width: 50%;
+}
+.tutorial {
+	width: 70%;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: calc(10% - 30px);
+}
+.tutorial-img {
+	margin-top: -150px;
+}
+.text {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex: 2;
+	flex-direction: column;
+	height: 100%;
+}
+.text .bold {
+	flex: 0 1 100%;
+	font-weight: bold;
+	font-size: 3rem;
+	color: #fff;
+}
+.text .small {
+	flex: 0 1 100%;
+	font-size: 1.2rem;
+	color: #f0f0f0;
+}
+.try-block {
+	width: 70%;
+	position: relative;
+	margin-top: 100px;
+}
+.try-input {
+	position: relative;
+	width: calc(100% + 20*12px);
+	height: 100%;
+	font-size: 1.2rem;
+	color: #b0bec5;
+	box-shadow: 1px 2px 7px #000;
+	padding: 2.5em 3.5em;
+	border: none;
+}
+.shop-img {
+	max-width: 100%;
+}
+.shop-container {
+	position: relative;
+}
+.mens-shop-btn {
+	position: absolute;
+	width: 35%;
+	height: 10%;
+	padding-top: 3%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	background: #FFE4E7;
+	border: 2px solid #FFE497;
+	transition: all .4s;
+  left: 32.5%;
+  bottom: 10%;
+}
+.mens-shop-btn:hover {
+	background: #FFE4CA;
+}
+.try-btn {
+	right: calc(-20*10px);
+	top: 25%;
+	position: absolute;
+	width: 30%;
+	height: 50%;
+	font-size: 1.2rem;
+	color: #fff;
+	background: #CD48AF;
+	border-radius: 30px;
+	outline: none;
+	cursor: pointer;
+	border: 2px solid #CD48AF;
+	transition: all .4s;
+}
+.try-btn:hover {
+	color: #CD48AF;
+  background: #fff;
+}
+.first-info {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	justify-content: space-between;
+	align-items: center;
+	width: 70%;
+	margin: 10px auto;
+}
+.first-info-title {
+	font-size: 2.5rem;
+	color: #000;
+	font-weight: bold;
+}
+.card {
+	align-self: flex-start;
+}
+.first-info-text {
+	font-size: 1.3rem;
+}
+.first-info-container {
+	width: 50%;
+	margin-left: 13em;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-direction: column;
+	align-self: flex-start;
+}
+.first-info-text p {
+	margin-top: 50px;
+}
+.second-info {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+  max-width: 100%;	
+}
+.second-info-container {
+	position: relative;
+	width: 70%;
+	margin: 9em auto;
+	padding-top: 100px;
+	border-radius: 20px;
+	border-left: 2px solid #FFDEB8;
+	border-right: 2px solid #FFDEB8;
+}
+.second-info-title {
+	font-size: 2.3rem;
+	font-weight: bold;
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+.block {
+	flex: 0 1 40%;
+	line-height: 1.75;
+}
+.block p {
+	margin-top: 30px;
+	font-size: 1.2rem;
+}
+.title {
+	font-size: 30px;
+	font-weight: bold;
+}
+.second-info-content {
+	margin: 6em;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.details {
+	width: 80%;
+	margin: 100px auto;
+	border-bottom: 2px solid #FFDED1;
+}
+.details-title {
+	margin-left: 10%;
+	width: 50%;
+	margin-bottom: 70px;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+.training {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	justify-content: space-between;
+	align-items: center;
+	margin-top: -10rem;
+}
+.platform {
+	flex: 0 2 calc(30% + 5px*5);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-bottom: 100px;
+	height: 100%;
+}
+.information {
+	flex: 0 2 calc(30% + 5px*10);
+	font-size: 1.4rem;
+	font-weight: lighter;
+}
+.screen img, .screenPhone img {
+	max-width: 100%;
+}
+.contact-form-container {
+	text-align: center;
+	margin-bottom: 100px;
+	width: 100%;
+}
+.contact-form-title {
+	font-size: 2.3rem;
+	font-weight: bold;
+	margin-bottom: 4rem;
+}
+.contact-form-info {
+	font-size: 1.2rem;
+}
+.contact-form-inp {
+	width: 30%;
+	position: relative;
+	margin: 3em auto;
+	text-align: center;
+}
+.contact-form-input {
+	padding: 2em 4em;
+	width: 100%;
+	color: #fff;
+	background: #035076;
+	border-radius: 3px;
+	border: none;
+}
+.contact-form-btn {
+	position: absolute;
+	top: 1em;
+	right: 1em; 
+	padding: .5em 0;
+	font-size: 1.2rem;
+	border: 2px solid transparent;
+	background: #fff;
+	outline: none;
+	font-weight: bold;
+	color: #035076;
+	border-radius: 2em;
+	cursor: pointer;
+	box-shadow: 0 2px 5px #8F0000;
+	transition: all .4s;
+	width: 25%;
+	margin: 0 auto;
+	text-align: center;
+}
+.contact-form-btn:hover {
+	background: #035076;
+	color: #fff;
+	box-shadow: none;
+	border: 2px solid #fff;
+}
+footer {
+	width: 100%;
+	padding-bottom: 10vh;
+	background: url(../IMG/footerBackground.png);
+}
+.footer-container {
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 10vh;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	justify-content: space-between;
+	position: relative;
+}
+.rights {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.footer-links {
+  flex: 0 1 30%;
+  color: #546e7a;
+}
+.footer-links a {
+	transition: color .4s;
+}
+.footer-links a:hover {
+	color: #f00;
+}
+.footer-links p {
+	margin-bottom: 4em;
+	color: #546e7a;
+	font-weight: 600;
+}
+.sellmor-info {
+	flex: 0 1 30%;
+}
+.footer-container .info {
+	font-size: 13px;
+}
+.footer-container .rights {
+	font-size: 11px;
+}
+.social-icons a {
+	margin: 10px;
+	-webkit-transform: scale(2, 2);
+	        transform: scale(2, 2);
+}
+.m-menu-btn {
+	display: none;
+}
+.m-menu {
+	position: fixed;
+	height: 100vh;
+	width: 50%;
+	z-index: 90;
+  top: 0;
+  right: 0;
+  bottom: 0;
+	background: #286593;
+	transition: -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	-webkit-transform: translateX(100%);
+	        transform: translateX(100%);
+	overflow-x: auto;
+}
+.m-menu-background {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .3);
+	z-index: 10;
+	-webkit-transform: translateX(100%);
+	        transform: translateX(100%);
+}
+.m-menu-link {
+	display: inline-block;
+	text-align: right;
+	margin-top: 30%;
+	width: 100%;
+	padding: 10px 3em 0 0;
+}
+.m-menu-link ul {
+  list-style: none;
+}
+.m-menu-logo {
+	margin-top: 8em;
+}
+.m-menu-logo img {
+	max-width: 100%;
+}
+.m-menu-link a {
+	color: #B0C4DE;
+	transition: color .4s;
+}
+.m-menu-link a:hover {
+	color: #fff;
+}
+.m-menu-link li {
+	color: #fff;
+	margin: 1em 0;
+	font-size: 2rem;
+	position: relative;
+}
+.m-menu-btn a {
+	font-size: 3rem;
+	color: #fff;
+}
+.close {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	font-size: 3rem;
+	color: #fff;
+	cursor: pointer;
+}
+.m-menu-active {
+	-webkit-transform: translateX(0%);
+	        transform: translateX(0%);
+}
+body::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background: #F3F3F3;
+}
+body::-webkit-scrollbar-thumb {
+  background: #CFC6D9;
+  border-radius: 15px;
+}
+body::-webkit-scrollbar-corner {
+	background: #999;
+}
