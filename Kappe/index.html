@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="New page from PSD">
+	<title>Kappe - Homepage</title>
+	<link rel="stylesheet" href="fonts/fontawesome/css/all.css">
+	<link rel="stylesheet" href="CSS/Normalize.css">
+	<link rel="stylesheet" href="CSS/Homepage/HomepageStyles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="page-wrapper">
+
+		<!-- Mobile menu (should be visible on a small display) -->
+
+		<div class="mobile-menu-container">
+			<header class="mobile-menu-header">
+				<div class="logo-wrapper">
+					<div class="logo">
+						<img src="IMG/Menu/logo.png" alt="">
+					</div>
+				</div>
+				<button class="mobile-open-btn">
+					<i class="fas fa-bars bars"></i>
+				</button>
+			</header>
+			<div class="mobile-menu">
+				<nav class="mobile-btns-list">
+					<a href="#" class="home-btn menu-btn menu-btn__light">Home</a>
+					<a href="#" class="work-btn menu-btn">Work</a>
+					<a href="#" class="about-btn menu-btn">About</a>
+					<a href="#" class="blog-btn menu-btn">Blog</a>
+					<a href="#" class="services-btn menu-btn">Services</a>
+					<a href="#" class="contact-btn menu-btn">Contact</a>
+				</nav>
+				<div class="mobile-social-icons">
+					<div class="social-icon">
+						<a href="#" class="flickr-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="googleplus-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="twitter-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="pinterest-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="dribbble-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="behance-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="facebook-icon"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  -->
+
+		<div class="left-section">
+			<div class="logo-wrapper">
+				<div class="logo">
+					<img src="IMG/Menu/logo.png" alt="">
+				</div>
+			</div>
+			<div class="left-section-menu">
+				<nav class="btns-list">
+					<a href="#" class="home-btn menu-btn current__menu-btn">Home</a>
+					<a href="#" class="work-btn menu-btn">Work</a>
+					<a href="#" class="about-btn menu-btn">About</a>
+					<a href="#" class="blog-btn menu-btn">Blog</a>
+					<a href="#" class="services-btn menu-btn">Services</a>
+					<a href="#" class="contact-btn menu-btn">Contact</a>
+				</nav>
+				<div class="filter-container">
+					<div class="filter">
+						<div class="filter-title-wrapper">
+							<span class="filter-title">Filter</span>
+							<i class="fas fa-th-large plates-icon"></i>
+						</div>
+						<div class="filter-options">
+							<ul class="filter-options-list">
+								<li class="filter-option">
+									<button class="all-works filter-btn" tabindex="0">All Works</button>
+								</li>
+								<li class="filter-option">
+									<button class="web-design filter-btn" tabindex="0">web design</button>
+								</li>
+								<li class="filter-option">
+									<button class="illustration filter-btn" tabindex="0">illustration</button>
+								</li>
+								<li class="filter-option">
+									<button class="photography filter-btn" tabindex="0">photography</button>
+								</li>
+								<li class="filter-option">
+									<button class="wallpapers filter-btn" tabindex="0">wallpapers</button>
+								</li>
+								<li class="filter-option">
+									<button class="brochures filter-btn" tabindex="0">brochures</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="social-icons">
+					<div class="social-icon">
+						<a href="#" class="flickr-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="googleplus-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="twitter-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="pinterest-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="dribbble-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="behance-icon"></a>
+					</div>
+					<div class="social-icon">
+						<a href="#" class="facebook-icon"></a>
+					</div>
+				</div>
+				<div class="copyright-container">
+					<i class="far fa-copyright copyright-icon"></i>
+					<span class="rights">2018 Kappe, All Rights Reserved</span>
+				</div>
+			</div>
+		</div>
+		<div class="contact-info-container">
+			<div class="contact-icon" tabindex="0">
+				<div class="contact-icon-circle">
+					<i class="fas fa-info-circle info-icon"></i>
+				</div>
+			</div>
+			<div class="info">
+				<div class="contact contact-phone">
+					<i class="fas fa-phone phone-icon"></i>
+					<span class="contact-text phone-text">9930 1234 5679</span>
+				</div>
+				<div class="contact contact-email">
+					<i class="fas fa-envelope mail-icon"></i>
+					<span class="contact-text email-text">contact@domain.com</span>
+				</div>
+				<div class="contact contact-address">
+					<i class="fas fa-home home-icon"></i>
+					<span class="contact-text address-text">street address example</span>
+				</div>
+			</div>
+		</div>
+		<main class="posts-container" id="posts-container">
+
+		</main>
+	</div>
+
+	<!-- An article element template, used in the file "posts-creator.js" -->
+
+	<template id="post-template">
+		<section class="post">
+			<article class="post-preview-cover">
+				<p class="cover-post-name">Cool App Design</p>
+				<p class="cover-post-category"></p>
+				<a href="#" class="cover-arrow-container"><i class="far fa-arrow-alt-circle-right arrow-icon"></i></a>
+			</article>
+		</section>
+	</template>
+
+	<!-- scripts -->
+
+	<script src="JS/Homepage/posts-creator.js" defer></script>
+	<script src="JS/Homepage/contacts-view.js" defer></script>
+	<script src="JS/Homepage/mobile-menu-view.js" defer></script>
+
+</body>
+</html>
