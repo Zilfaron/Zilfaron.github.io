@@ -1,9 +1,0 @@
-.immersed__transition {
-	-webkit-transition: all .7s cubic-bezier(0, 0, .1, 1);
-	-o-transition: all .7s cubic-bezier(0, 0, .1, 1);
-	transition: all .7s cubic-bezier(0, 0, .1, 1);
-}
-.immersed__element {
-	transform: translateY(50px);
-	opacity: 0;
-}

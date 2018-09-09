@@ -1,1 +1,0 @@
-var immerseds = document.querySelectorAll(".immersed__element");window.onscroll = window.onresize = window.onchange = window.onload = function() {for (var i = 0; i < immerseds.length; i++) {if (immerseds[i].getBoundingClientRect().top + 100 <= window.innerHeight) {immerseds[i].classList.remove("immersed__element");}}}		
