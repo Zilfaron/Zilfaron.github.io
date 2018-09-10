@@ -135,10 +135,9 @@ class Game {
 
 			if (lose_X && lose_Y) {
 				if (self.started) {
+					self.started = false;
 					self.lose();
 				}
-
-				self.started = false;
 			} else {
 				if (self.started) {
 					self.ctx.clearRect(0, objects_y, safe_area, 30);
