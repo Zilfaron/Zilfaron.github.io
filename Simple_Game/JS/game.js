@@ -70,12 +70,13 @@ class Game {
 	}
 
 	// Start the game
-	start(difficulty) {
+	start(wn, gs) {
 		if (this.started) {
 			return false;
 		}
 
-		this.waves = difficulty;
+		this.waves = wn;
+		this.waves_duration = gs;
 
 		this.started = true;
 
