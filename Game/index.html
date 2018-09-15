@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Game :)</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<div class="game">
+		<div class="game__tutorial">
+			<div class="tutorial__task">
+				<p>Задача игры проста, тебе нужно не задевать падающие на тебя конструкции. Перемещай игрока под безопасные зоны, передвигая курсор по окну игры.</p>
+			</div>
+			<div class="tutorial__info">
+				<span>The last game was: </span><div class="info__last-time">-- / -- / --</div>
+				<span>Waves: </span><div class="info__last-scores">0/30</div>
+			</div>
+			<div class="tutorial__start">
+				<p>Начать игру: </p>
+				<input type="button" value="Start" class="start__btn">
+			</div>			
+		</div>
+
+		<canvas id="canvas" class="game__canvas"></canvas>
+	</div>
+
+	<script src="JS/game.js" defer></script>
+	<script src="JS/tutorial.js" defer></script>
+</body>
+</html>
