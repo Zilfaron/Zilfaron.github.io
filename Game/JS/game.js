@@ -54,7 +54,7 @@ class Game {
 
 		this.waves_duration = 1000;
 
-		this.frame_interval;
+		this.anim_frame;
 		this.wave_interval;
 	}
 
@@ -133,7 +133,7 @@ class Game {
 		function frame() {
 			// if player and objects coordinates are valid, then initialize lose method
 			var lose_X = self.player.x < safe_area || self.player.x > safe_area + 40,
-					lose_Y = objects_y >= self.player.y - 20 && objects_y <= self.player.y + self.player.height;
+					lose_Y = objects_y > self.player.y - 20 && objects_y < self.player.y + self.player.height;
 
 			if (lose_X && lose_Y) {
 				if (self.started) {
@@ -151,17 +151,14 @@ class Game {
 						} else continue;
 					}			
 				}
+				if (objects_y <= self.canvas.height) {
+					window.requestAnimFrame(frame);
+				} else {
+					window.cancelAnimFrame(self.anim_frame);
+				}
 			}
 		}
-
-		this.frame_interval = setInterval( function() {
-			if (objects_y <= self.canvas.height) {
-				frame();
-			} else {
-				clearInterval(this.frame_interval);
-			}
-		}, 1000 / 60);	
-
+		this.anim_frame = window.requestAnimFrame(frame);
 
 		this.current_wave++;
 	}
