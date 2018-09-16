@@ -81,7 +81,7 @@ class Game {
 		this.started = true;
 
 		// Expand the canvas
-		this.canvas.classList.add("canvas__scaled");
+		this.canvas.classList.remove("canvas__scaled");
 
 		var self = this;
 
