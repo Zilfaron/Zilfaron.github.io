@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple game</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="JS/Modules/animFrame.js" async></script>
+</head>
+<body>
+	<div class="game">
+		<div class="game__tutorial">
+			<div class="tutorial__task">
+				<p>Задача игры проста, тебе нужно не задевать падающие на тебя конструкции. Перемещай игрока под безопасные зоны, передвигая курсор по окну игры.</p>
+			</div>
+			<div class="tutorial__info">
+				<span>The last game was: </span><div class="info__last-time">-- / -- / --</div>
+				<span>Waves: </span><div class="info__last-scores">0/0</div>
+				<span>Speed: </span><div class="info__last-game-speed">------</div>
+			</div>
+			<div class="tutorial__options">
+				<div class="options__waves-number">
+					<p>Number of waves:</p>
+					<select class="waves-number__select">
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30" selected>30 (Recommended)</option>
+						<option value="31">31</option>
+						<option value="32">32</option>
+						<option value="33">33</option>
+						<option value="34">34</option>
+						<option value="35">35</option>
+						<option value="36">36</option>
+						<option value="37">37</option>
+						<option value="38">38</option>
+						<option value="39">39</option>
+						<option value="40">40</option>
+						<option value="41">41</option>
+						<option value="42">42</option>
+						<option value="43">43</option>
+						<option value="44">44</option>
+						<option value="45">45</option>
+						<option value="46">46</option>
+						<option value="47">47</option>
+						<option value="48">48</option>
+						<option value="49">49</option>
+						<option value="50">50</option>
+					</select>
+				</div>
+				<div class="options__game-speed">
+					<p>Game speed:</p>
+					<select class="game-speed__select">
+						<option value="1000" selected>Normal (Recommended)</option>
+						<option value="800">Fast</option>
+						<option value="700">Very fast</option>
+					</select>
+				</div>				
+			</div>
+			<div class="tutorial__start">
+				<p>Начать игру: </p>
+				<input type="button" value="Start" class="start__btn">
+			</div>
+		</div>
+
+		<canvas id="canvas" class="game__canvas canvas_scaled"></canvas>
+	</div>
+
+	<script src="JS/tutorial.js" defer></script>
+	<script src="JS/game.js" defer></script>
+</body>
+</html>
