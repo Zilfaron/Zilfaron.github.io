@@ -201,5 +201,5 @@ class Game {
 	}
 }
 
-var game = new Game(CANVAS, 900, 900);
+var game = new Game(CANVAS, window.innerWidth, window.innerHeight);
 game.expand();
