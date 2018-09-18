@@ -94,6 +94,6 @@ body {
 
 @media screen and (max-width: 1200px) {
 	.game {
-		height: auto;
+		height: 100%;
 	}
 }
