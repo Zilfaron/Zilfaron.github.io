@@ -58,8 +58,6 @@ class Game {
 
 		this.anim_frame;
 		this.wave_interval;
-
-		this.expand();
 	}
 
 	// Set the width and height of the canvas
@@ -204,3 +202,4 @@ class Game {
 }
 
 var game = new Game(CANVAS, 900, 900);
+game.expand();
