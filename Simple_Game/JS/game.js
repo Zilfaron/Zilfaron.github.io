@@ -2,6 +2,8 @@ const
 		  // Getting the canvas element
 		  CANVAS = document.getElementById("canvas");
 
+CANVAS.hidden = true;		  
+
 // Player class
 class Player {
 	constructor(field, width = 100, height = 100) {
@@ -78,6 +80,8 @@ class Game {
 		}
 
 		this.clear();
+
+		this.canvas.hidden = false;
 
 		this.waves = wn; // Waves number
 		this.waves_duration = gs; // Game speed
