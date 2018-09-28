@@ -27,6 +27,8 @@ class Player {
 	move(coord_x) {
 		this.field.ctx.clearRect(this.x, this.y, this.width, this.height);
 
+		this.field.ctx.fillStyle = "#5959FF";
+
 		this.x = coord_x;
 
 		this.field.ctx.fillRect(coord_x, this.y, this.width, this.height);
@@ -121,6 +123,8 @@ class Game {
 	}
 
 	nextWave() {
+		this.ctx.fillStyle = "#FF0000";
+
 		var self = this;
 
 		if (this.current_wave >= this.waves) { // Check for win
