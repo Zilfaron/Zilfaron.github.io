@@ -20,6 +20,7 @@ class Player {
 
 	// Position the player on the canvas
 	position() {
+		this.field.ctx.fillStyle = "#5959FF";
 		this.field.ctx.fillRect(this.x, this.y, this.width, this.height);
 	}
 
@@ -123,8 +124,6 @@ class Game {
 	}
 
 	nextWave() {
-		this.ctx.fillStyle = "#FF0000";
-
 		var self = this;
 
 		if (this.current_wave >= this.waves) { // Check for win
@@ -151,6 +150,7 @@ class Game {
 					self.lose();
 				}
 			} else {
+				this.ctx.fillStyle = "#FF0000";
 				self.ctx.clearRect(0, objects_y, safe_area, 30);
 				self.ctx.clearRect(safe_area + self.player.width + 40, objects_y, self.canvas.width, 30);
 				objects_y += 5;
