@@ -150,7 +150,7 @@ class Game {
 					self.lose();
 				}
 			} else {
-				this.ctx.fillStyle = "#FF0000";
+				self.ctx.fillStyle = "#FF0000";
 				self.ctx.clearRect(0, objects_y, safe_area, 30);
 				self.ctx.clearRect(safe_area + self.player.width + 40, objects_y, self.canvas.width, 30);
 				objects_y += 5;
