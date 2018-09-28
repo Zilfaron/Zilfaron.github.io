@@ -13,7 +13,7 @@ class Player {
 		// The game window in which this player
 		this.field = field;
 
-		// Координаты игрока на холсте
+		// Player coordinates
 		this.x = this.field.width / 2 - this.width / 2; // The X coordinate in the middle of the canvas
 		this.y = this.field.height - this.height - 50; // The Y coordinate at the bottom of the canvas
 	}
