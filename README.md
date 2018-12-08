@@ -1,1 +1,1 @@
-# Repository for layouts.
+# Repository for Github Pages.
