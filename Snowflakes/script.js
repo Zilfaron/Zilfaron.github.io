@@ -17,6 +17,9 @@
 		color: "rgba(255, 255, 255, 0.75)"
 	};
 	
+	let snowflakeImg = new Image();
+	snowflakeImg.src = "snowflake.svg";
+
 	let maxSnowflakes = 50,
 			snowflakes		= [];
 
@@ -32,14 +35,14 @@
 
 	let drawSnowflakes = () => {
 		ctx.clearRect(0, 0, settings.w, settings.h);
-		ctx.fillStyle = snowflake.color;
+		//ctx.fillStyle = snowflake.color;
 		ctx.beginPath();
 
 		for (let i = 0; i < snowflakes.length; i++) {
 			let s = snowflakes[i]; // current item
 			
 			ctx.moveTo(s.x, s.y);
-			ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2, true);
+			ctx.drawImage(s.x, s.x, s.radius * 2, s.radius * 2);
 		}
 
 		ctx.fill();
