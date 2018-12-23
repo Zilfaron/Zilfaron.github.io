@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Snowflakes</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			font: 100% "Arial", sans-serif;
+			overflow: hidden;
+		}
+
+		.page-wrapper {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="page-wrapper">
+		<canvas class="flakes-area"></canvas>
+	</div>
+
+	<script>
+		(() => {
+			let canvas	= document.querySelector(".flakes-area"),
+						ctx		= canvas.getContext("2d");
+
+			let settings = { // canvas settings
+				bgColor: "#6890BC",
+				w: canvas.parentNode.offsetWidth,
+				h: canvas.parentNode.offsetHeight
+			};
+			
+			[canvas.width, canvas.height, canvas.style.backgroundColor] = [settings.w, settings.h, settings.bgColor];
+
+			let snowflake = { // snowflake parameters
+				minRadius: 4,
+				maxRadius: 12,
+				color: "rgba(255, 255, 255, 0.78)"
+			};
+			
+			let maxSnowflakes = 50,
+					snowflakes		= [];
+
+			for (let i = 1; i <= maxSnowflakes; i++) {
+				snowflakes.push({
+					x: Math.random() * settings.w,
+					y: Math.random() * settings.h,
+					radius: Math.random() * (snowflake.maxRadius - snowflake.minRadius) + snowflake.minRadius,
+					density: Math.random() * maxSnowflakes,
+					speed: Math.random() * 4
+				});
+			}	
+
+			let drawSnowflakes = () => {
+				ctx.clearRect(0, 0, settings.w, settings.h);
+				ctx.fillStyle = snowflake.color;
+				ctx.beginPath();
+
+				for (let i = 0; i < snowflakes.length; i++) {
+					let s = snowflakes[i]; // current item
+					
+					ctx.moveTo(s.x, s.y);
+					ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2, true);
+				}
+
+				ctx.fill();
+				updateSnowflakes();
+
+				requestAnimationFrame(drawSnowflakes);
+			}	
+
+			let angle = 0;
+
+			let updateSnowflakes = () => {
+				angle += 0.01;
+
+				for (let i = 0; i < snowflakes.length; i++) {
+					let s = snowflakes[i]; // current item
+
+					snowflakes[i].x += Math.cos(angle) + snowflakes[i].speed;
+					snowflakes[i].y += Math.sin(angle) + snowflakes[i].speed * 2;
+
+					if (s.x > settings.w + 15 || s.x < -15 || s.y > settings.h + 15) {
+						if ( !(i % 3) ) {
+							snowflakes[i] = { ...snowflakes[i], x: Math.random() * settings.w, y: -15 }; // enter from top for 66% of snowflakes
+						} else {
+						
+							if ( Math.sin(angle) > 0 ) {
+								snowflakes[i] = { ...snowflakes[i], x: -15, y: Math.random() * settings.h }; // enter from left side
+							} else {
+								snowflakes[i] = { ...snowflakes[i], x: settings.w + 15, y: Math.random() * settings.h };	// enter from right side
+							}
+						
+						}
+					}	
+				}
+			}
+
+			requestAnimationFrame(drawSnowflakes);
+		})();
+	</script>
+</body>
+</html>
