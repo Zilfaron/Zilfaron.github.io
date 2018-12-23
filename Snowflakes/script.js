@@ -16,9 +16,6 @@
 		maxSpeed: 3,
 		color: "rgba(255, 255, 255, 0.75)"
 	};
-
-	let snowflakeImg = new Image();
-	snowflakeImg.src = "snowflake.png";
 	
 	let maxSnowflakes = 50,
 			snowflakes		= [];
