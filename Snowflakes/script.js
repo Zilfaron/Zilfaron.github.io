@@ -1,4 +1,4 @@
-(() => {
+window.addEventListener("load", () => {
 	let canvas	= document.querySelector(".flakes-area"),
 				ctx		= canvas.getContext("2d");
 
@@ -8,7 +8,18 @@
 		h: canvas.parentNode.offsetHeight
 	};
 	
-	[canvas.width, canvas.height, canvas.style.backgroundColor] = [settings.w, settings.h, settings.bgColor];
+	canvas.style.backgroundColor = settings.bgColor;
+
+	let updateCanvasSize = () => {
+		[canvas.width, canvas.height] = [settings.w, settings.h];
+	}
+	updateCanvasSize();
+
+	window.addEventListener("resize", () => {
+		[settings.w, settings.h] = [canvas.parentNode.offsetWidth, canvas.parentNode.offsetHeight];
+
+		updateCanvasSize();
+	});
 
 	let snowflake = { // snowflake parameters
 		minRadius: 3,
@@ -17,15 +28,15 @@
 		color: "rgba(255, 255, 255, 0.75)"
 	};
 	
-	let maxSnowflakes = 50,
+	let snowflakesNumber = 70,
 			snowflakes		= [];
 
-	for (let i = 1; i <= maxSnowflakes; i++) {
+	for (let i = 1; i <= snowflakesNumber; i++) {
 		snowflakes.push({
 			x: Math.random() * settings.w,
 			y: Math.random() * settings.h,
 			radius: Math.random() * (snowflake.maxRadius - snowflake.minRadius) + snowflake.minRadius,
-			density: Math.random() * maxSnowflakes,
+			density: Math.random() * snowflakesNumber,
 			speed: Math.random() * snowflake.maxSpeed
 		});
 	}	
@@ -39,7 +50,7 @@
 			let s = snowflakes[i]; // current item
 			
 			ctx.moveTo(s.x, s.y);
-			ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2, true);
+			ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2, true); // draw snowflake
 		}
 
 		ctx.fill();
@@ -60,10 +71,10 @@
 			snowflakes[i].y += Math.sin(angle) + s.speed * 2;
 
 			if (s.x > settings.w + 15 || s.x < -15 || s.y > settings.h + 15) { // if snowflake isn't in the viewport
-				snowflakes[i] = { ...snowflakes[i], x: Math.random() * (settings.w + 30) - 30, y: -15 }; // enter from left side
+				snowflakes[i] = { ...snowflakes[i], x: Math.random() * ( (settings.w - 100) + 100) - 100, y: -15 }; // enter from left side
 			}			
 		}
 	}
 
 	requestAnimationFrame(drawSnowflakes);
-})();
+});
