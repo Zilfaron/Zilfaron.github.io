@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
 		color: "rgba(255, 255, 255, 0.75)"
 	};
 	
-	let snowflakesNumber = 70,
+	let snowflakesNumber = Math.max( ~~(settings.w / 27.4), 40 ),
 			snowflakes		= [];
 
 	for (let i = 1; i <= snowflakesNumber; i++) {
@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
 			y: Math.random() * settings.h,
 			radius: Math.random() * (snowflake.maxRadius - snowflake.minRadius) + snowflake.minRadius,
 			density: Math.random() * snowflakesNumber,
-			speed: Math.random() * snowflake.maxSpeed
+			speed: Math.random() * (snowflake.maxSpeed - 1) + 1
 		});
 	}	
 
