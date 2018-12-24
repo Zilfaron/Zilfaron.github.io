@@ -67,7 +67,7 @@ window.addEventListener("load", () => {
 		for (let i = 0; i < snowflakes.length; i++) {
 			let s = snowflakes[i]; // current item
 
-			snowflakes[i].x += Math.cos(angle) + s.speed;
+			snowflakes[i].x += Math.cos(angle + s.density) + s.speed;
 			snowflakes[i].y += Math.sin(angle) + s.speed * 2;
 
 			if (s.x > settings.w + 15 || s.x < -15 || s.y > settings.h + 15) { // if snowflake isn't in the viewport
