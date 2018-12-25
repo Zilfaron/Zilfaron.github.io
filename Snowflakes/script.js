@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
 	for (let i = 1; i <= snowflakesNumber; i++) {
 		snowflakes.push({
 			x: Math.random() * settings.w,
-			y: Math.random() * settings.h,
+			y: Math.random() * -settings.h,
 			radius: Math.random() * (snowflake.maxRadius - snowflake.minRadius) + snowflake.minRadius,
 			density: Math.random() * snowflakesNumber,
 			speed: Math.random() * (snowflake.maxSpeed - 1) + 1
