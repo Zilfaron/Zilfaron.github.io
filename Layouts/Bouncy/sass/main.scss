@@ -1,0 +1,142 @@
+@import "SASS_modules/_settings.scss";
+@import "fonts.scss";
+@import "reset.scss";
+
+html, body {
+  min-width: convert($mobiles);
+  font: 100% "Open Sans", sans-serif;
+  line-height: 175%;
+  color: #81868E;
+
+  @media screen and (min-width: convert($l_desktop)) {
+    font-size: 110%;
+  }
+
+  @media screen and (max-width: convert($tablets)) {
+    font-size: 95%;
+  }
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+@import "preloader.scss";
+
+.section_title, .project_title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: convert(20, rem);
+  text-transform: uppercase;
+  letter-spacing: convert(2);
+  color: #333B46;
+}
+
+.section_subtitle {
+  max-width: 30%;
+  margin-top: convert(40);
+  font-size: convert(14, rem);
+
+  @media screen and (max-width: convert($m_desktop)) {
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: convert($tablets)) {
+    max-width: 80%;
+  }
+
+  @media screen and (max-width: convert(472)) {
+    max-width: 90%;
+  }
+}
+
+.titles_center {
+  @include column(flex-start, center);
+  text-align: center;
+}
+
+.logo {
+  font-size: convert(25);
+  font-family: "Arial", sans-serif;
+  font-weight: 900;
+  display: inline-block;
+  transition: transform 0.2s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &_light {
+    .logo__link {
+      color: #fff;
+    }
+  }
+
+  &_dark {
+    color: #323A45;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.selected_text_dark {
+  font-weight: 600;
+  color: #6C7179;
+}
+
+.selected_text_light {
+  font-weight: 600;
+  color: #fff;
+}
+
+.selected_text_green {
+  font-weight: 600;
+  color: #19BD9A;
+}
+
+.slider_viewport {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.slider_slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slider_control {
+  width: convert(10);
+  height: convert(10);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+@import "header.scss";
+@import "about.scss";
+@import "details.scss";
+@import "featured.scss";
+@import "services.scss";
+@import "quotes.scss";
+@import "portfolio.scss";
+@import "team.scss";
+@import "talk.scss";
+@import "testimonials.scss";
+@import "blog.scss";
+@import "price.scss";
+@import "subscribe.scss";
+@import "contact.scss";
+@import "map.scss";
+@import "footer.scss";
+
+
+.input_error {
+  border-color: #F66161;
+  color: #D56161;
+
+  &::-webkit-input-placeholder {
+    color: #F78383;
+  }
+}

@@ -1,0 +1,167 @@
+@import "SASS_modules/_settings.scss";
+
+.team {
+  padding: convert(80) 0 convert(100);
+  background-color: #fff;
+
+  &-slider {
+    width: 100%;
+    margin-top: convert(65);
+
+    &__viewport {
+      width: 100%;
+    }
+
+    &__slides {
+      @include row;
+    }
+
+    &__slide-content {
+      @include row(space-between);
+      margin: 0 auto;
+      padding: 0 convert(10);
+      max-width: convert(1028);
+
+      @media screen and (max-width: convert(528)) {
+        align-items: center;
+      }
+
+      @media screen and (max-width: convert(445)) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__controls {
+      margin: convert(60) auto 0 auto;
+      @include row(center);
+    }
+
+    &__control {
+      margin: 0 convert(5);
+      background: #fff;
+      border: 1px solid #19BD9A;
+
+      &:hover, &:focus {
+        background-color: #19BD9A;
+      }
+    }
+
+    &__active_control {
+      background-color: #19BD9A;
+    }
+  }
+
+  &-member__photo {
+    @media screen and (max-width: convert(540)) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: convert(528)) {
+      height: 50%;
+    }
+  }
+}
+
+.member-info {
+  max-width: 35%;
+  height: 100%;
+  position: relative;
+  text-align: right;
+  padding: convert(30) 0;
+  margin-right: convert(48);
+
+  @media screen and (max-width: convert(554)) {
+    max-width: 40%;
+  }
+
+  @media screen and (max-width: convert(496)) {
+    margin-right: convert(16);
+  }
+
+  @media screen and (max-width: convert(454)) {
+    max-width: 45%;
+  }
+
+  @media screen and (max-width: convert(445)) {
+    max-width: 85%;
+  }
+
+  &__name-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: convert(-48);
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: #19BD9A;
+
+      @media screen and (max-width: convert(1080)) {
+        right: convert(-16);
+      }
+    }
+  }
+
+  &__name {
+    font-size: convert(20);
+    color: #464646;
+  }
+
+  &__rank {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #81868E;
+  }
+
+  &__description {
+    margin-top: convert(20);
+    font-size: convert(14);
+    color: #81868E;
+  }
+
+  &__charts {
+    margin-top: convert(25);
+  }
+}
+
+.member-charts {
+  padding-left: convert(37);
+}
+
+.member-chart {
+  margin-top: convert(20);
+
+  &__info {
+    min-width: convert(300);
+    @include row(space-between);
+
+    @media screen and (max-width: convert(1000)) {
+      min-width: 0;
+    }
+  }
+
+  &__name, &__value {
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #81868E;
+  }
+
+  &__progress-container {
+    width: 100%;
+    height: 4px;
+    background-color: #E1E4E9;
+  }
+
+  &__progress {
+    height: 100%;
+    background-color: #19BD9A;
+  }
+}
+
+.branding_progress, .design_progress, .ui_progress {
+  width: 0%;
+}

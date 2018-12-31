@@ -1,0 +1,40 @@
+@import "SASS_modules/_settings.scss";
+
+.page-footer {
+  padding: convert(80) 0 convert(90) 0;
+  text-align: center;
+  background-color: #fff;
+
+  &__rights {
+    margin-top: convert(10);
+  }
+
+  &__social-icons {
+    margin-top: convert(30);
+    @include row(center);
+  }
+}
+
+.social-icons {
+  &__icon {
+    width: convert(30);
+    height: convert(30);
+    display: block;
+    margin: 0 convert(5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: opacity 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@each $social in twitter, facebook, linkedin, instagram, vimeo {
+  .#{$social}-icon {
+    background-image: url("../img/icons/#{$social}-icon.svg");
+  }
+}

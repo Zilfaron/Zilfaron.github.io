@@ -1,0 +1,81 @@
+@import "SASS_modules/_settings.scss";
+
+.team-quotes {
+  width: 100%;
+  background: url("../img/backgrounds/quotes-bg.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 0 convert(100);
+
+  @media screen and (max-width: convert(402)) {
+    padding: 0 convert(40);
+  }
+
+  &-inner {
+    max-width: convert(1170);
+    margin: 0 auto;
+    @include row(space-between, center);
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__quote {
+    color: #B2B3B3;
+    margin-top: convert(60);
+  }
+
+  &__author {
+    margin-top: convert(30);
+  }
+
+  &-content {
+    padding-top: convert(50);
+    padding-bottom: convert(60);
+    width: 50%;
+
+    @media screen and (max-width: convert($m_desktop - 100)) {
+      width: 75%;
+    }
+
+    @media screen and (max-width: convert(542)) {
+      width: 100%;
+    }
+  }
+
+  &-decoration {
+    position: relative;
+    bottom: convert(80);
+
+    @media screen and (max-width: convert($m_desktop - 100)) {
+      display: none;
+    }
+  }
+
+  &__decoration-logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.quote__author {
+
+  &-name {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #A6A7A7;
+  }
+
+  &-rank {
+    text-transform: uppercase;
+    color: #B2B3B3;
+    font-weight: bold;
+  }
+}
+
+.green_text {
+  color: #19B896;
+  font-weight: 300;
+}

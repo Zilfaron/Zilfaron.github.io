@@ -1,0 +1,40 @@
+@import "SASS_modules/_settings.scss";
+
+.map-section {
+  height: convert(630);
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: convert(1366)) {
+    height: convert(430);
+  }
+
+  &__open {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    @include row(center, center);
+    cursor: pointer;
+    transition: transform 0.7s;
+  }
+
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: convert(16);
+    font-weight: 400;
+    margin-right: convert(16);
+  }
+
+  &__arrow {
+    width: convert(18);
+  }
+
+  &__map-container {
+    width: 100%;
+    height: 100%;
+  }
+}

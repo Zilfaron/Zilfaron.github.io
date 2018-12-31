@@ -1,0 +1,109 @@
+@import "SASS_modules/_settings.scss";
+
+.price {
+  padding: convert(80) 0 convert(100) 0;
+  background-color: #F3F3F3;
+
+  &-rates {
+    width: 60%;
+    max-width: convert(1170);
+    margin: convert(64) auto 0;
+    @include row(space-between);
+    flex-wrap: wrap;
+
+    @media screen and (max-width: convert($m_desktop)) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: convert($s_desktop)) {
+      width: 90%;
+      justify-content: center;
+    }
+    &__card {
+      width: convert(230);
+      height: convert(300);
+      position: relative;
+
+      @media screen and (max-width: convert($s_desktop)) {
+        margin: convert(20);
+      }
+    }
+  }
+}
+
+.rate-card {
+  perspective: convert(1000);
+
+  &__front, &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: transform 1s;
+    backface-visibility: hidden;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    padding: convert(36) 0 0 convert(33);
+  }
+
+  &:hover &__front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__back {
+    transform: rotateY(360deg);
+  }
+
+  &__name {
+    width: 100%;
+    padding: convert(26) 0;
+    background-color: #19BD9A;
+    font-size: convert(20);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__price {
+    width: 100%;
+    text-align: center;
+    margin-top: convert(65);
+    font-size: convert(42);
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #1FBBA6;
+  }
+
+  &__per {
+    width: 100%;
+    text-align: center;
+    margin-top: convert(8);
+    font-size: convert(20);
+  }
+
+  &__text {
+    font-size: convert(14);
+  }
+
+  &__start-btn {
+    width: 100%;
+    background-color: #19BD9A;
+    color: #fff;
+    padding: convert(26);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: #19BD85;
+    }
+  }
+}

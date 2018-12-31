@@ -1,0 +1,88 @@
+.about-details {
+  width: 100%;
+  background-color: #F3F3F3;
+  padding: 5rem 0 6.25rem 0;
+}
+
+.about-details-top {
+  margin: 0 auto;
+}
+
+.about-details-texts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.about-details-texts {
+  width: 70%;
+  max-width: 69.375rem;
+  margin: 4.0625rem auto 0 auto;
+}
+
+.about-details-texts__title {
+  color: #464646;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+.about-details-texts__main-text {
+  max-width: 35%;
+}
+
+.about-details-texts__additional-text {
+  max-width: 50%;
+  font-size: 0.875rem;
+}
+
+.icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 3.75rem;
+}
+
+.icons-container__icon {
+  background-color: #81868E;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 3.3125rem;
+  height: 3.3125rem;
+  border-radius: 50%;
+  margin: 0 0.8125rem;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.icons-container__icon:hover,
+.icons-container__icon:active {
+  background-color: #19BD9A;
+}
+
+.heart_icon {
+  background-image: url("../img/icons/heart-icon.png");
+}
+
+.mouse_icon {
+  background-image: url("../img/icons/mouse-icon.png");
+}
+
+.light_icon {
+  background-image: url("../img/icons/light-icon.png");
+}
+
+@media screen and (max-width: 26.875rem) {
+  .about-details-texts {
+    width: 80%;
+  }
+}

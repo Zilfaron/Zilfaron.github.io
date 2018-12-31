@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 			density: Math.random() * snowflakesNumber,
 			speed: Math.random() * (snowflake.maxSpeed - 1) + 1
 		});
-	}	
+	};
 
 	let drawSnowflakes = () => {
 		ctx.clearRect(0, 0, settings.w, settings.h);
@@ -51,13 +51,13 @@ window.addEventListener("load", () => {
 			
 			ctx.moveTo(s.x, s.y);
 			ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2, true); // draw snowflake
-		}
+		};
 
 		ctx.fill();
 		updateSnowflakes();
 
 		requestAnimationFrame(drawSnowflakes);
-	}	
+	};
 
 	let angle = 0;
 
@@ -72,9 +72,9 @@ window.addEventListener("load", () => {
 
 			if (s.x > settings.w + 15 || s.x < -15 || s.y > settings.h + 15) { // if snowflake isn't in the viewport
 				snowflakes[i] = { ...snowflakes[i], x: Math.random() * ( (settings.w - 100) + 100) - 100, y: -15 }; // enter from left side
-			}			
-		}
-	}
+			}		
+		};
+	};
 
 	requestAnimationFrame(drawSnowflakes);
 });

@@ -1,0 +1,74 @@
+@import "SASS_modules/_settings.scss";
+
+.testimonials {
+  padding: convert(80) 0 convert(100) 0;
+  background-color: #F3F3F3;
+
+  &-slider {
+    max-width: convert(1170);
+    margin: convert(60) auto 0 auto;
+    padding: convert(58) 0;
+    background-color: #fff;
+
+    &__slides {
+      @include row;
+    }
+
+    &__controls {
+      @include row(center);
+      margin-top: convert(50);
+    }
+
+    &__control {
+      margin: 0 convert(5);
+      background-color: #fff;
+      border: 1px solid #19BD9A;
+
+      &:hover, &:focus {
+        background: #19BD9A;
+      }
+    }
+
+    &__active_control {
+      background-color: #19BD9A;
+    }
+  }
+}
+
+.testimonial {
+  width: 100%;
+  padding: 0 convert(60);
+  @include row(space-between);
+
+  @media screen and (max-width: convert(512)) {
+    padding: 0 convert(20);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__photo {
+    height: 100%;
+  }
+
+  &__content {
+    margin: convert(8) 0 0 convert(30);
+
+    @media screen and (max-width: convert(512)) {
+      margin-top: convert(25);
+    }
+  }
+
+  &-author {
+    margin-top: convert(30);
+  }
+
+  &__author-rank {
+    font-weight: 400;
+    font-size: convert(14);
+    color: #464646;
+  }
+
+  &__author-name, &__author-rank {
+    text-transform: uppercase;
+  }
+}

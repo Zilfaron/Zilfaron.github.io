@@ -1,0 +1,57 @@
+@import "SASS_modules/_settings.scss";
+
+.subscribe {
+  padding: convert(80) 0 convert(100);
+  background: url("../img/backgrounds/subscribe-bg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &-titles__title {
+    color: #fff;
+  }
+
+  &-form {
+    width: 100%;
+    margin-top: convert(64);
+    @include row(center);
+    flex-wrap: wrap;
+
+    @media screen and (max-width: convert(526)) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__email-input {
+      min-width: convert(358);
+      padding: convert(14) convert(14) convert(14) convert(22);
+      font-size: convert(14);
+      color: #CFD3D4;
+      background-color: transparent;
+      border: 1px solid #81868E;
+
+      @media screen and (max-width: convert(380)) {
+        min-width: convert(300);
+      }
+    }
+
+    &__submit-btn {
+      margin-left: convert(9);
+      padding: convert(14) convert(50);
+      background-color: #19BD9A;
+      text-transform: uppercase;
+      font-size: convert(14);
+      color: #fff;
+      transition: background-color 0.4s;
+      cursor: pointer;
+
+      @media screen and (max-width: convert(526)) {
+        margin-top: convert(20);
+        margin-left: 0;
+      }
+
+      &:hover {
+        background-color: #19CDA3;
+      }
+    }
+  }
+}

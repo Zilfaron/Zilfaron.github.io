@@ -1,0 +1,235 @@
+.page-header {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/backgrounds/header-bg.png") no-repeat center;
+  background-size: 100% 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header-top {
+  width: 85%;
+  height: auto;
+  margin-top: 2.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__nav {
+  width: 50%;
+  height: auto;
+}
+
+.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.nav-items__btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1.03125rem;
+  padding: 0.3125rem 1.25rem;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.nav-items__btn:hover {
+  background-color: #fff;
+  color: #7E664E;
+}
+
+.nav-items__link {
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-items__link::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  top: 0.125rem;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.nav-items__link:hover::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.header-content {
+  text-align: center;
+  max-width: 600px;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-125%);
+  -ms-transform: translateY(-125%);
+  transform: translateY(-125%);
+}
+
+.header-content__title {
+  font-size: 2.1875rem;
+  color: #fff;
+}
+
+.header-content__content {
+  margin-top: 1.375rem;
+}
+
+.header-anchor {
+  display: block;
+  padding: 1.25rem 0 0 0;
+  text-align: center;
+  -webkit-animation: moveY 3s infinite linear;
+  animation: moveY 3s infinite linear;
+  cursor: pointer;
+}
+
+.header-anchor-wrapper {
+  position: absolute;
+  bottom: 4.6875rem;
+}
+
+.header-anchor__arrow {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+@-webkit-keyframes moveY {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveY {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 71.875rem) {
+  .header__nav {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .header-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 1.875rem;
+  }
+
+  .header__nav {
+    margin-top: 0.9375rem;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 33.5rem) {
+  .nav-items__item {
+    margin: 0 0.3125rem;
+  }
+
+  .nav-items {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 33.75rem) {
+  .header-content {
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 21.375rem) {
+  .header-content {
+    top: 45%;
+  }
+}

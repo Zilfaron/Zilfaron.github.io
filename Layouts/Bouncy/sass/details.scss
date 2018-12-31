@@ -1,0 +1,69 @@
+@import "SASS_modules/_settings.scss";
+
+.about-details {
+  width: 100%;
+  background-color: #F3F3F3;
+  padding: convert(80) 0 convert(100) 0;
+
+  &-top {
+    margin: 0 auto;
+  }
+
+  &-texts-wrapper {
+    @include row(space-between);
+    margin-top: convert(40);
+  }
+
+  &-texts {
+    width: 70%;
+    max-width: convert(1110);
+    margin: convert(65) auto 0 auto;
+
+    @media screen and (max-width: convert(430)) {
+      width: 80%;
+    }
+
+    &__title {
+      color: #464646;
+      font-weight: 400;
+      font-size: convert(20);
+      width: 100%;
+    }
+
+    &__main-text {
+      max-width: 35%;
+    }
+
+    &__additional-text {
+      max-width: 50%;
+      font-size: convert(14);
+    }
+  }
+}
+
+.icons-container {
+  @include row(center);
+  margin-top: convert(60);
+
+  &__icon {
+    background-color: #81868E;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: convert(53);
+    height: convert(53);
+    border-radius: 50%;
+    margin: 0 convert(13);
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover, &:active {
+      background-color: #19BD9A;
+    }
+  }
+}
+
+@each $item in heart, mouse, light {
+  .#{$item}_icon {
+    background-image: url("../img/icons/#{$item}-icon.png");
+  }
+}

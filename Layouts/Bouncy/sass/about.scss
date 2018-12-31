@@ -1,0 +1,73 @@
+@import "SASS_modules/_settings.scss";
+
+.about-us {
+  width: 100%;
+  padding: convert(80) 0 convert(72) 0;
+  background-color: #fff;
+
+  &-content-wrapper {
+    width: 60%;
+    max-width: convert(1180);
+    margin: 0 auto;
+    @include row(space-between, center);
+
+    @media screen and (max-width: convert($s_desktop)) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: convert($tablets)) {
+      width: 75%;
+    }
+  }
+
+  &-content {
+    width: 55%;
+
+    &__title {
+      margin-top: convert(10);
+    }
+
+    &__content {
+      font-size: convert(14);
+      margin-top: convert(50);
+    }
+
+    &__read-wrapper {
+      margin-top: convert(32);
+    }
+
+    &__read-more {
+      color: #333B46;
+      border: 1px solid #333B46;
+      padding: convert(8) convert(25);
+      border-radius: convert(25);
+
+      &:hover, &:active {
+        background-color: #333B46;
+        color: #fff;
+      }
+    }
+
+    @media screen and (max-width: convert(624)) {
+      width: 100%;
+    }
+  }
+
+  &-decoration {
+    text-align: right;
+
+    &__picture {
+      @media screen and (max-width: convert($s_desktop)) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: convert($tablets)) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: convert(624)) {
+        display: none;
+      }
+    }
+  }
+}

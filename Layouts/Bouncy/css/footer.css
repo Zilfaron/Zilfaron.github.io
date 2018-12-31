@@ -1,0 +1,57 @@
+.page-footer {
+  padding: 5rem 0 5.625rem 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.page-footer__rights {
+  margin-top: 0.625rem;
+}
+
+.page-footer__social-icons {
+  margin-top: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social-icons__icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: block;
+  margin: 0 0.3125rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.social-icons__icon:hover {
+  opacity: 0.8;
+}
+
+.twitter-icon {
+  background-image: url("../img/icons/twitter-icon.svg");
+}
+
+.facebook-icon {
+  background-image: url("../img/icons/facebook-icon.svg");
+}
+
+.linkedin-icon {
+  background-image: url("../img/icons/linkedin-icon.svg");
+}
+
+.instagram-icon {
+  background-image: url("../img/icons/instagram-icon.svg");
+}
+
+.vimeo-icon {
+  background-image: url("../img/icons/vimeo-icon.svg");
+}

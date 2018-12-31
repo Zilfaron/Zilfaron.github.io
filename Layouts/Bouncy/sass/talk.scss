@@ -1,0 +1,27 @@
+@import "SASS_modules/_settings.scss";
+
+.talk {
+  padding: convert(57) 0;
+  text-align: center;
+  background: url("../img/backgrounds/talk-bg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__title {
+    color: #fff;
+    margin-bottom: convert(32);
+  }
+
+  &__contact-btn-link {
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: 400;
+    border-radius: convert(24);
+    padding: convert(8) convert(32);
+
+    &:hover {
+      background-color: #fff;
+      color: #070707;
+    }
+  }
+}

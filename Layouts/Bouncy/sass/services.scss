@@ -1,0 +1,152 @@
+@import "SASS_modules/_settings.scss";
+
+.services {
+  padding-top: convert(80);
+  padding-bottom: convert(130);
+  background-color: #fff;
+
+  @media screen and (max-width: convert($m_desktop)) {
+    padding-bottom: convert(200);
+  }
+
+  @media screen and (max-width: convert($s_desktop)) {
+    padding-bottom: convert(120);
+  }
+
+  &-content {
+    width: 70%;
+    max-width: convert(1110);
+    position: relative;
+    margin: convert(60) auto 0 auto;
+    @include row(space-between);
+
+    @media screen and (max-width: convert($m_desktop)) {
+      @include column(flex-start, center);
+      width: 80%;
+    }
+
+    &__tabs {
+      width: 50%;
+      @include row(space-between);
+
+      @media screen and (max-width: convert($m_desktop)) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: convert(472)) {
+        width: 85%;
+      }
+
+      @media screen and (max-width: convert(350)) {
+        width: 95%;
+      }
+
+      &-content {
+        margin-left: convert(44);
+      }
+    }
+
+    &__tab-switch {
+      width: convert(53);
+      height: convert(53);
+      background-color: #81868E;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      margin-bottom: convert(16);
+      transition: background-color 0.3s;
+      cursor: pointer;
+
+      &:hover, &:active {
+        background-color: #19BD9A;
+      }
+    }
+
+    &__skills {
+      padding-top: convert(50);
+      width: 45%;
+      @include row(space-between);
+      text-align: center;
+
+      @media screen and (max-width: convert($m_desktop)) {
+        width: 50%;
+        padding-top: convert(20);
+      }
+
+      @media screen and (max-width: convert($m_desktop)) {
+        width: 55%;
+      }
+
+      @media screen and (max-width: convert($tablets)) {
+        width: 75%;
+      }
+
+      @media screen and (max-width: convert(620)) {
+        width: 95%;
+      }
+
+      @media screen and (max-width: convert(472)) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &__skill {
+      width: convert(124);
+      height: convert(124);
+
+      @media screen and (max-width: convert(472)) {
+        margin: convert(14);
+      }
+
+      & > .main-circle {
+        stroke: #047378;
+        stroke-width: 2;
+        fill: none;
+      }
+
+      & > .skill-circle {
+        stroke: #19BD9A;
+        stroke-width: 4;
+        fill: none;
+      }
+
+      &-name {
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        font-size: convert(16);
+      }
+    }
+  }
+}
+
+.tab-titles {
+
+  &__title {
+    font-size: convert(20);
+  }
+
+  &__subtitle {
+    margin-top: convert(25);
+  }
+}
+
+.tab-content {
+  margin-top: convert(25);
+  font-size: convert(14);
+}
+
+@each $item in tools, design, gamepad, wire {
+  .#{$item}_tab_switch {
+    background-image: url("../img/icons/#{$item}-icon.png");
+  }
+}
+
+.skill-value {
+  color: #81868E;
+  font-size: convert(24);
+}
+
+.percent-symbol {
+  font-size: convert(16);
+}

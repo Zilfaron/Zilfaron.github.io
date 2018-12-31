@@ -1,0 +1,25 @@
+.talk {
+  padding: 3.5625rem 0;
+  text-align: center;
+  background: url("../img/backgrounds/talk-bg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.talk__title {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.talk__contact-btn-link {
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: 400;
+  border-radius: 1.5rem;
+  padding: 0.5rem 2rem;
+}
+
+.talk__contact-btn-link:hover {
+  background-color: #fff;
+  color: #070707;
+}

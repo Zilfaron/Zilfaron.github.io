@@ -1,0 +1,92 @@
+.team-quotes {
+  width: 100%;
+  background: url("../img/backgrounds/quotes-bg.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 0 6.25rem;
+}
+
+.team-quotes-inner {
+  max-width: 73.125rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.team-quotes__title {
+  color: #fff;
+}
+
+.team-quotes__quote {
+  color: #B2B3B3;
+  margin-top: 3.75rem;
+}
+
+.team-quotes__author {
+  margin-top: 1.875rem;
+}
+
+.team-quotes-content {
+  padding-top: 3.125rem;
+  padding-bottom: 3.75rem;
+  width: 50%;
+}
+
+.team-quotes-decoration {
+  position: relative;
+  bottom: 5rem;
+}
+
+.team-quotes__decoration-logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.quote__author-name {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #A6A7A7;
+}
+
+.quote__author-rank {
+  text-transform: uppercase;
+  color: #B2B3B3;
+  font-weight: bold;
+}
+
+.green_text {
+  color: #19B896;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 65.625rem) {
+  .team-quotes-content {
+    width: 75%;
+  }
+
+  .team-quotes-decoration {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 33.875rem) {
+  .team-quotes-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 25.125rem) {
+  .team-quotes {
+    padding: 0 2.5rem;
+  }
+}

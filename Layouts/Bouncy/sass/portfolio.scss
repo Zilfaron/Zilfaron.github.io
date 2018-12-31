@@ -1,0 +1,226 @@
+@import "SASS_modules/_settings.scss";
+
+.portfolio {
+  padding: convert(80) 0 convert(100) 0;
+  background-color: #f3f3f3;
+
+  &-menu {
+    width: 40%;
+    margin: convert(88) auto 0 auto;
+    @include row(space-between);
+    flex-wrap: wrap;
+    text-align: center;
+
+    @media screen and (max-width: convert($m_desktop)) {
+      width: 55%;
+    }
+
+    @media screen and (max-width: convert($s_desktop)) {
+      width: 65%;
+    }
+
+    @media screen and (max-width: convert(660)) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: convert(484)) {
+      justify-content: center;
+    }
+
+    &__item {
+      @media screen and (max-width: convert(484)) {
+        margin: 0 convert(10);
+      }
+    }
+
+    &__filter-link {
+      font-size: convert(16);
+      color: #464646;
+      font-weight: 400;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: #35C4A5;
+        width: 60%;
+        height: 2px;
+        margin: 0 auto;
+        border-radius: 2px;
+        transition: transform 0.5s;
+        transform: scaleX(0);
+      }
+
+      &:hover::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-content-wrapper {
+    max-width: convert(1110);
+    margin: convert(77) auto 0 auto;
+  }
+
+  &-works {
+    width: 100%;
+    @include row(space-between, flex-start);
+    flex-wrap: wrap;
+
+    @media screen and (max-width: convert($m_desktop)) {
+      padding: 0 convert(10);
+    }
+
+    @media screen and (max-width: convert(846)) {
+      justify-content: center;
+    }
+
+    &__column {
+      @include column;
+
+      @media screen and (max-width: convert(846)) {
+        margin: 0 convert(10);
+      }
+    }
+  }
+
+  &-project {
+    margin: convert(4) 0;
+    overflow: hidden;
+    position: relative;
+
+    &:hover .project-info {
+      opacity: 1;
+    }
+
+    &:hover .project-info__decoration-line {
+      transform: translateX(0);
+      width: convert(23);
+    }
+
+    &__cover-image {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-start {
+    width: 100%;
+    padding: convert(40) 0 convert(50) 0;
+    margin: convert(40) auto 0 auto;
+    background: url("../img/backgrounds/portfolio-start-bg.png") no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: convert(20);
+    text-align: center;
+
+    &__start-project {
+      margin-top: convert(24);
+
+      &-btn-link {
+        background-color: transparent;
+        padding: convert(6) convert(24);
+        outline: none;
+        color: #fff;
+        font-size: convert(16);
+        font-weight: 400;
+        border: 1px solid #fff;
+        border-radius: convert(20);
+
+        &:hover, &:focus {
+          background-color: #fff;
+          color: #1AA587;
+        }
+      }
+    }
+
+    &__text {
+      padding: 0 convert(10);
+    }
+  }
+}
+
+.project-info {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.52, 0.29, 0.54, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 convert(26) 0 convert(40);
+  @include column(space-around);
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: "Source Sans Pro";
+    font-size: convert(20);
+    color: #19BD9A;
+  }
+
+  &__decoration-line {
+    margin-top: convert(16);
+    width: convert(150);
+    height: convert(1);
+    background-color: #19BD9A;
+    transition: all 0.7s cubic-bezier(0.26, 0.41, 0.56, 1.45);
+    transform: translateX( convert(-200) );
+  }
+
+  &__description {
+    color: #B2B3B3;
+    font-size: convert(12);
+    line-height: convert(20);
+  }
+
+  &__btn {
+    width: convert(30);
+    height: convert(30);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-color: #353535;
+    }
+  }
+
+  &__link-btn {
+    margin-right: convert(8);
+    background-image: url("../img/icons/link-icon.png");
+  }
+
+  &__like-btn {
+    background-image: url("../img/icons/heart-icon.png");
+    background-size: 50% 45%;
+  }
+}
+
+.choose-link_active::after {
+  transform: scaleX(1);
+}
+
+.column {
+  &-three {
+    @media screen and (max-width: convert(846)) {
+      display: none;
+    }
+  }
+
+  &-four {
+    @media screen and (max-width: convert(1050)) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: convert(846)) {
+      display: none;
+    }
+  }
+}

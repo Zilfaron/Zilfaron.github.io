@@ -1,0 +1,122 @@
+@import "SASS_modules/_settings.scss";
+
+.contact-us {
+  padding-top: convert(60);
+  background-color: #F3F3F3;
+
+  &__contacts {
+    margin: convert(64) auto 0 auto;
+    max-width: convert(940);
+    @include row(space-between);
+    flex-wrap: wrap;
+
+    @media screen and (max-width: convert($s_desktop)) {
+      justify-content: center;
+    }
+  }
+
+  &__contact {
+    text-align: center;
+
+    @media screen and (max-width: convert($s_desktop)) {
+      margin: convert(20);
+    }
+  }
+
+  &__contact-form-wrapper {
+    margin-top: convert(100);
+    padding: convert(80) 0 convert(130);
+    background-color: #fff;
+
+    @media screen and (max-width: convert($s_desktop)) {
+      padding: convert(80) convert(15) convert(130);
+    }
+  }
+}
+
+.contact {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+  &__bg-image {
+    display: block;
+    height: 100%;
+  }
+
+  &__info {
+    padding: convert(20) convert(25) convert(20);
+    background-color: #fff;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: convert(5);
+  }
+
+  &__text {
+    line-height: 140%;
+    font-size: convert(14);
+    text-transform: uppercase;
+  }
+
+  &__decorations-wrapper {
+    position: relative;
+    @include row(center, center);
+  }
+
+  &__icon {
+    position: absolute;
+  }
+
+  &-form {
+    max-width: convert(940);
+    margin: 0 auto;
+
+    &__data-inputs {
+      width: 100%;
+      @include row(space-between);
+
+      @media screen and (max-width: convert($s_desktop)) {
+        @include column;
+      }
+    }
+
+    &__input {
+      border: 1px solid #DCE0E3;
+      font-size: convert(14);
+      padding: convert(15) convert(19);
+      min-width: convert(287);
+
+      @media screen and (max-width: convert($s_desktop)) {
+        width: 100%;
+        margin-top: convert(10);
+      }
+    }
+
+    &__message-area {
+      padding: convert(15) convert(19);
+      margin-top: convert(29);
+      width: 100%;
+      min-height: convert(190);
+      border: 1px solid #DCE0E3;
+      resize: none;
+      font: convert(14) "Open Sans", sans-serif;
+    }
+
+    &__submit-btn {
+      margin-top: convert(20);
+      width: 100%;
+      background-color: #19BD9A;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      padding: convert(20) 0;
+      cursor: pointer;
+      transition: background-color 1s;
+
+      &:hover {
+        background-color: #19BD85;
+      }
+    }
+  }
+}

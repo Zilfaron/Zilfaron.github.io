@@ -1,0 +1,49 @@
+$mobiles: 340;
+$l_mobiles: 460;
+$tablets: 768;
+$s_desktop: 992;
+$m_desktop: 1150;
+$l_desktop: 1600;
+$bigger: 1921;
+
+$max: 100%;
+
+%hiddenScrollbar {
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+%list {
+  list-style: none;
+}
+
+@mixin grid($el_columns) {
+  width: $max / $grid_columns * $el_columns;
+}
+
+@mixin row($jc:flex-start, $ai:flex-start) {
+  display: flex;
+  @if ($jc != flex-start) {
+    justify-content: $jc;
+  }
+  @if ($ai != flex-start) {
+    align-items: $ai;
+  }
+}
+
+@mixin column($jc:flex-start, $ai:flex-start) {
+  display: flex;
+  flex-direction: column;
+  @if ($jc != flex-start) {
+    justify-content: $jc;
+  }
+  @if ($ai != flex-start) {
+    align-items: $ai;
+  }
+}
+
+@function convert($pxsize, $u:rem) {
+  @return $pxsize / 16 + $u;
+}

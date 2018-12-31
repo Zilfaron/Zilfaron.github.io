@@ -1,0 +1,155 @@
+@import "SASS_modules/_settings.scss";
+
+.blog {
+  width: 100%;
+  position: relative;
+  padding: convert(80) convert(100) 0 convert(100);
+  background: url("../img/backgrounds/blog-bg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media screen and (max-width: convert(572)) {
+    padding: convert(60) convert(75) 0 convert(75);
+  }
+
+  @media screen and (max-width: convert(472)) {
+    padding: convert(50) convert(65) 0 convert(65);
+  }
+
+  @media screen and (max-width: convert(358)) {
+    padding: convert(30) convert(65) 0 convert(40);
+  }
+
+  &-content {
+    max-width: convert(1160);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__subtitle {
+    max-width: 40%;
+    color: #B2B3B3;
+  }
+
+  &-post {
+
+    &__name {
+      color: #E1E4E9;
+      font: convert(20) "Source Sans Pro", sans-serif;
+    }
+
+    &__author {
+      margin-top: convert(16);
+      font: convert(14) "Source Sans Pro", sans-serif;
+      font-weight: 300;
+      color: #19BD9A;
+      text-transform: uppercase;
+
+      &::before {
+        content: "By";
+        margin-right: convert(4);
+        font-style: italic;
+        color: #81868E;
+      }
+    }
+
+    &__stats {
+      margin-top: convert(10);
+      font: convert(14) "Source Sans Pro", sans-serif;
+      color: #464646;
+    }
+
+    &__text {
+      margin-top: convert(60);
+      font-size: convert(14);
+      color: #81868E;
+
+      @media screen and (max-width: convert(400)) {
+        margin-top: convert(15);
+      }
+    }
+
+    &__read-more {
+      margin-top: convert(58);
+
+      @media screen and (max-width: convert(508)) {
+        margin-top: convert(28);
+      }
+
+      &-link-btn {
+        color: #B2B3B3;
+      }
+    }
+  }
+
+  &-slider {
+
+    &__viewport {
+      max-height: convert(540);
+    }
+
+    &__slides {
+      @include column;
+    }
+
+    &__slide {
+      padding: convert(100) 0 convert(100) convert(70);
+      max-width: 60%;
+
+      @media screen and (max-width: convert(982)) {
+        max-width: 80%;
+      }
+
+      @media screen and (max-width: convert(862)) {
+        padding: convert(75) 0 convert(75) convert(45);
+      }
+
+      @media screen and (max-width: convert(620)) {
+        max-width: 90%;
+        padding: convert(50) 0 convert(50) convert(20);
+      }
+
+      @media screen and (max-width: convert(572)) {
+        min-width: 96%;
+      }
+
+      @media screen and (max-width: convert(372)) {
+        padding: convert(30) 0 convert(40) convert(10);
+      }
+    }
+
+    &__controls {
+      @include column(center);
+      position: absolute;
+      right: convert(100);
+      top: 0;
+      bottom: 0;
+
+      @media screen and (max-width: convert(1250)) {
+        right: 0;
+      }
+
+      @media screen and (max-width: convert(604)) {
+        right: convert(-30);
+      }
+    }
+
+    &__control {
+      margin: convert(5) 0;
+      background-color: transparent;
+      border: 1px solid #AAABAB;
+
+      &:hover, &:focus {
+        background-color: #AAABAB;
+      }
+    }
+
+    &__active_control {
+      background-color: #AAABAB;
+    }
+  }
+}
