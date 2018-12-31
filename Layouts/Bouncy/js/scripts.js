@@ -4,8 +4,6 @@ console.time("Execution time");
 
 //= anchors.js
 
-//= portfolio.js
-
 //= sliders.js
 
 //= price.js
