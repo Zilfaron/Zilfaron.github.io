@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url("../fonts/Source Sans Pro/sourcesansproextralight.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansproextralight.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansproextralight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
@@ -7,6 +8,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro ExtraLight Italic"), local("SourceSansPro-ExtraLightIt"), url("../fonts/Source Sans Pro/sourcesansproextralightitalic.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansproextralightitalic.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansproextralightitalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
@@ -14,6 +16,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url("../fonts/Source Sans Pro/sourcesansprolight.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansprolight.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansprolight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -21,6 +24,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Light Italic"), local("SourceSansPro-LightIt"), url("../fonts/Source Sans Pro/sourcesansprolightitalic.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansprolightitalic.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansprolightitalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
@@ -28,6 +32,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("../fonts/Source Sans Pro/sourcesanspro.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesanspro.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesanspro.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -35,6 +40,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url("../fonts/Source Sans Pro/sourcesansproitalic.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansproitalic.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansproitalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -42,6 +48,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url("../fonts/Source Sans Pro/sourcesansprosemibold.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansprosemibold.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansprosemibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -49,6 +56,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Semibold Italic"), local("SourceSansPro-SemiboldIt"), url("../fonts/Source Sans Pro/sourcesansprosemibolditalic.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansprosemibolditalic.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansprosemibolditalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
@@ -56,6 +64,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("../fonts/Source Sans Pro/sourcesansprobold.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansprobold.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansprobold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -63,6 +72,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Bold Italic"), local("SourceSansPro-BoldIt"), url("../fonts/Source Sans Pro/sourcesansprobolditalic.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansprobolditalic.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansprobolditalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
@@ -70,6 +80,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Black"), local("SourceSansPro-Black"), url("../fonts/Source Sans Pro/sourcesansproblack.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansproblack.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansproblack.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
@@ -77,6 +88,7 @@
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: auto;
   src: local("Source Sans Pro Black Italic"), local("SourceSansPro-BlackIt"), url("../fonts/Source Sans Pro/sourcesansproblackitalic.woff2") format("woff2"), url("../fonts/Source Sans Pro/sourcesansproblackitalic.woff") format("woff"), url("../fonts/Source Sans Pro/sourcesansproblackitalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
@@ -84,6 +96,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Light"), local("OpenSans-Light"), url("../fonts/Open Sans/opensanslight.woff2") format("woff2"), url("../fonts/Open Sans/opensanslight.woff") format("woff"), url("../fonts/Open Sans/opensanslight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -91,6 +104,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url("../fonts/Open Sans/opensanslightitalic.woff2") format("woff2"), url("../fonts/Open Sans/opensanslightitalic.woff") format("woff"), url("../fonts/Open Sans/opensanslightitalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
@@ -98,6 +112,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans"), local("OpenSans"), url("../fonts/Open Sans/opensans.woff2") format("woff2"), url("../fonts/Open Sans/opensans.woff") format("woff"), url("../fonts/Open Sans/opensans.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -105,6 +120,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Italic"), local("OpenSans-Italic"), url("../fonts/Open Sans/opensansitalic.woff2") format("woff2"), url("../fonts/Open Sans/opensansitalic.woff") format("woff"), url("../fonts/Open Sans/opensansitalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
@@ -112,6 +128,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("../fonts/Open Sans/opensanssemibold.woff2") format("woff2"), url("../fonts/Open Sans/opensanssemibold.woff") format("woff"), url("../fonts/Open Sans/opensanssemibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -119,6 +136,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url("../fonts/Open Sans/opensanssemibolditalic.woff2") format("woff2"), url("../fonts/Open Sans/opensanssemibolditalic.woff") format("woff"), url("../fonts/Open Sans/opensanssemibolditalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
@@ -126,6 +144,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/Open Sans/opensansbold.woff2") format("woff2"), url("../fonts/Open Sans/opensansbold.woff") format("woff"), url("../fonts/Open Sans/opensansbold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -133,6 +152,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("../fonts/Open Sans/opensansbolditalic.woff2") format("woff2"), url("../fonts/Open Sans/opensansbolditalic.woff") format("woff"), url("../fonts/Open Sans/opensansbolditalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
@@ -140,6 +160,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url("../fonts/Open Sans/opensansextrabold.woff2") format("woff2"), url("../fonts/Open Sans/opensansextrabold.woff") format("woff"), url("../fonts/Open Sans/opensansextrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
@@ -147,6 +168,7 @@
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: auto;
   src: local("Open Sans Extrabold Italic"), local("OpenSans-ExtraboldItalic"), url("../fonts/Open Sans/opensansextrabolditalic.woff2") format("woff2"), url("../fonts/Open Sans/opensansextrabolditalic.woff") format("woff"), url("../fonts/Open Sans/opensansextrabolditalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
