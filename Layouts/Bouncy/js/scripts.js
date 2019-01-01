@@ -1,8 +1,10 @@
 console.time("Execution time");
 
-//= preloader.js
+//= imgload.js
 
 //= anchors.js
+
+//= portfolio.js
 
 //= sliders.js
 
